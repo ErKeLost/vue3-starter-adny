@@ -7,11 +7,22 @@ import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
-
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      // 全局引入了 scss 的文件
+      scss: {
+        additionalData: `
+        @import "~/styles/variables.scss";
+      `,
+        javascriptEnabled: true,
+      },
     },
   },
   plugins: [
@@ -30,11 +41,30 @@ export default defineConfig({
         'vue-router',
         '@vueuse/core',
       ],
+      resolvers: [
+        // Auto import functions from Element Plus, e.g. ElMessage, ElMessageBox... (with style)
+        // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
+        ElementPlusResolver(),
+        // Auto import icon components
+        // 自动导入图标组件
+      ],
       dts: true,
     }),
 
     // https://github.com/antfu/vite-plugin-components
     Components({
+      extensions: ['vue', 'tsx'],
+      deep: true,
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.tsx$/],
+      // imports 指定组件所在位置，默认为 src/components
+      dirs: ['src/components/', 'src/layout/', 'src/views'],
+      resolvers: [
+        // Auto register icon components
+        // 自动注册图标组件
+        // Auto register Element Plus components
+        // 自动导入 Element Plus 组件
+        ElementPlusResolver(),
+      ],
       dts: true,
     }),
 
