@@ -13,6 +13,7 @@ module.exports = {
     defineProps: true,
     defineExpose: true,
   },
+  plugins: ['prettier'],
   extends: [
     './.eslintrc-auto-import.json',
     '@antfu',
@@ -23,10 +24,15 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'no-console': 'off',
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'vue/multi-word-component-names': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'vue/no-mutating-props': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
   },
 }
