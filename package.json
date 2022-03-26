@@ -3,12 +3,16 @@
   "packageManager": "pnpm@6.32.3",
   "scripts": {
     "build": "vite build",
-    "dev": "vite --port 3333",
     "dev:open": "vite --port 3333 --open",
-    "lint": "eslint .",
+    "dev": "vite",
     "typecheck": "vue-tsc --noEmit",
-    "preview": "vite preview",
-    "test": "vitest"
+    "preview": "vite preview --open",
+    "test": "vitest",
+    "prettier": "prettier --write .",
+    "prepare": "husky install",
+    "lint": "eslint . --ext .ts,.vue,.js,.tsx",
+    "lint:only": "eslint .",
+    "commit": "cz"
   },
   "dependencies": {
     "@vueuse/core": "^8.1.1",
@@ -47,7 +51,31 @@
     "vitest": "^0.7.0",
     "vue-tsc": "^0.33.2"
   },
-  "eslintConfig": {
-    "extends": "@antfu"
+  "vite": {
+    "optimizeDeps": {
+      "include": [
+        "@vueuse/core",
+        "element-plus/es",
+        "element-plus/es/components/aside/style/css",
+        "element-plus/es/components/badge/style/css",
+        "element-plus/es/components/button/style/css",
+        "element-plus/es/components/container/style/css",
+        "element-plus/es/components/divider/style/css",
+        "element-plus/es/components/drawer/style/css",
+        "element-plus/es/components/footer/style/css",
+        "element-plus/es/components/header/style/css",
+        "element-plus/es/components/icon/style/css",
+        "element-plus/es/components/loading/style/css",
+        "element-plus/es/components/main/style/css",
+        "element-plus/es/components/message/style/css",
+        "element-plus/es/components/slider/style/css",
+        "element-plus/es/components/switch/style/css",
+        "element-plus/es/components/tooltip/style/css",
+        "nprogress",
+        "pinia",
+        "vue",
+        "vue-router"
+      ]
+    }
   }
 }

@@ -44,7 +44,7 @@
           >
             <i-ep-add-location />
             <i-ep-aim />
-            <i-ep-picture-rounded color='red' font-size='30px'/>
+            <i-ep-picture-rounded color="red" font-size="30px" />
             <div v-loading="{ text: 'I LOVE YOU...' }" style="height: 500px">
               Loading Area
             </div>

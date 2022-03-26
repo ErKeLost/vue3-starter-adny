@@ -16,7 +16,7 @@
     size="30%"
   >
     <div class="default-setting-container">
-      <defaultSetting></defaultSetting>
+      <defaultSetting />
     </div>
   </el-drawer>
 </template>

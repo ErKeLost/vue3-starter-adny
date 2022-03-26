@@ -22,7 +22,7 @@ declare module 'vue' {
     ElSlider: typeof import('element-plus/es')['ElSlider']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
-    Footer: typeof import('./components/Footer.vue')['default']
+    Footer: typeof import('./layout/src/components/Footer/index.vue')['default']
     IcBaselineWbSunny: typeof import('./components/Icon/IcBaselineWbSunny.vue')['default']
     IEpAddLocation: typeof import('~icons/ep/add-location')['default']
     IEpAim: typeof import('~icons/ep/aim')['default']

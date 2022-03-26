@@ -40,6 +40,6 @@ export function useProjectSetting() {
     getPermissionMode,
     getShowFooter,
     getIsPageAnimate,
-    getPageAnimateType
+    getPageAnimateType,
   }
 }

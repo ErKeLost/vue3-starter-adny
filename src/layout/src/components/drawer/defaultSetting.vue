@@ -14,7 +14,7 @@
       :inactive-icon="CarbonMoon"
     />
     <el-divider>
-      <NetFix></NetFix>
+      <NetFix />
     </el-divider>
     <el-divider>
       <span class="setting-title-sub"> 系统主题 </span>
@@ -30,7 +30,7 @@
             src="../../../../assets/images/nav-theme-dark.svg"
             alt="左侧菜单模式"
             @click="togNavMode('vertical')"
-          />
+          >
         </el-tooltip>
         <span class="setting-title-sub-er">左侧菜单模式</span>
         <div class="setting-choose">
@@ -71,7 +71,7 @@
             src="../../../../assets/images/nav-horizontal.svg"
             alt="顶部菜单模式"
             @click="togNavMode('horizontal')"
-          />
+          >
         </el-tooltip>
         <span class="setting-title-sub-er">顶部菜单模式</span>
         <div class="setting-choose">
@@ -89,7 +89,7 @@
             src="../../../../assets/images/nav-horizontal-mix.svg"
             alt="顶部菜单混合模式"
             @click="togNavMode('horizontal-mix')"
-          />
+          >
         </el-tooltip>
         <span class="setting-title-sub-er">顶部菜单混合模式</span>
         <div class="setting-choose">
@@ -100,13 +100,17 @@
 
     <el-divider>界面功能</el-divider>
     <div class="drawer-setting-switch">
-      <div class="drawer-setting-switch-title">固定顶栏</div>
+      <div class="drawer-setting-switch-title">
+        固定顶栏
+      </div>
       <div class="drawer-setting-switch-action">
         <el-switch v-model="settingStore.headerSetting.fixed" />
       </div>
     </div>
     <div class="drawer-setting-switch">
-      <div class="drawer-setting-switch-title">固定侧边栏</div>
+      <div class="drawer-setting-switch-title">
+        固定侧边栏
+      </div>
       <div class="drawer-setting-switch-action">
         <el-switch
           v-model="settingStore.menuSetting.fixed"
@@ -115,7 +119,9 @@
       </div>
     </div>
     <div class="drawer-setting-switch">
-      <div class="drawer-setting-switch-title">不占据Header的固定侧边栏</div>
+      <div class="drawer-setting-switch-title">
+        不占据Header的固定侧边栏
+      </div>
       <div class="drawer-setting-switch-action">
         <el-switch
           v-model="settingStore.menuSetting.headerFixed"
@@ -124,13 +130,17 @@
       </div>
     </div>
     <div class="drawer-setting-switch">
-      <div class="drawer-setting-switch-title">固定Footer</div>
+      <div class="drawer-setting-switch-title">
+        固定Footer
+      </div>
       <div class="drawer-setting-switch-action">
         <el-switch v-model="settingStore.footerSetting.fixed" />
       </div>
     </div>
     <div class="drawer-setting-slider">
-      <div class="drawer-setting-switch-title">Heade高度</div>
+      <div class="drawer-setting-switch-title">
+        Heade高度
+      </div>
       <div class="slider">
         <el-slider
           v-model="settingStore.headerSetting.height"
@@ -140,7 +150,9 @@
       </div>
     </div>
     <div class="drawer-setting-slider">
-      <div class="drawer-setting-switch-title">Footer高度</div>
+      <div class="drawer-setting-switch-title">
+        Footer高度
+      </div>
       <div class="slider">
         <el-slider
           v-model="settingStore.footerSetting.height"
