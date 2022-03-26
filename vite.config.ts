@@ -77,7 +77,7 @@ export default defineConfig({
     Vue({
       reactivityTransform: true,
     }),
-    svgLoader(),
+    // svgLoader(),  // 目前测试 使用该插件 导致打包 svg 会有问题
     VueJsx(),
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
