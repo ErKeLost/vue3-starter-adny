@@ -35,7 +35,7 @@ const showDefaultSetting = ref(false)
   font-size: 15px;
   border-color: #5db5b6;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  z-index: 999;
+  z-index: 2001;
 }
 :deep(.el-switch__core) {
   // height: 24px;

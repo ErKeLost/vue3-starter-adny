@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 
 import path from 'path'
-import { defineConfig } from 'vite'
+import { ConfigEnv, defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import VueJsx from '@vitejs/plugin-vue-jsx'
@@ -11,7 +11,10 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import Inspect from 'vite-plugin-inspect'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import svgLoader from 'vite-svg-loader'
+import OptimizationPersist from 'vite-plugin-optimize-persist'
+import PkgConfig from 'vite-plugin-package-config'
+import { ElementPlusResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers'
 const pathSrc = path.resolve(__dirname, 'src')
 
 export default defineConfig({
@@ -32,10 +35,49 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    minify: 'terser',
+    brotliSize: false,
+    // 消除打包大小超过500kb警告
+    chunkSizeWarningLimit: 2000,
+    // 在生产环境移除console.log
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    assetsDir: 'static/assets',
+    // 静态资源打包到dist下的不同目录
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'static/js/[name]-[hash].js',
+        entryFileNames: 'static/js/[name]-[hash].js',
+        assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+      },
+    },
+  },
+  server: {
+    host: true, // host设置为true才可以使用network的形式，以ip访问项目
+    port: 8080, // 端口号
+    // open: true, // 自动打开浏览器
+    cors: true, // 跨域设置允许
+    strictPort: true, // 如果端口已占用直接退出
+    // 接口代理
+    proxy: {
+      '/api': {
+        // 本地 8000 前端代码的接口 代理到 8888 的服务端口
+        target: 'http://localhost:8888/',
+        changeOrigin: true, // 允许跨域
+        rewrite: path => path.replace('/api/', '/'),
+      },
+    },
+  },
   plugins: [
     Vue({
       reactivityTransform: true,
     }),
+    svgLoader(),
     VueJsx(),
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
@@ -56,6 +98,7 @@ export default defineConfig({
         // Auto import icon components
         // 自动导入图标组件
         IconsResolver({
+          // 动态转换前缀
           prefix: 'Icon',
         }),
       ],
@@ -78,6 +121,7 @@ export default defineConfig({
         // Auto register Element Plus components
         // 自动导入 Element Plus 组件
         ElementPlusResolver(),
+        VueUseComponentsResolver(),
       ],
       dts: path.resolve(pathSrc, 'components.d.ts'),
     }),
@@ -87,6 +131,8 @@ export default defineConfig({
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
     Unocss(),
+    PkgConfig(),
+    OptimizationPersist(),
   ],
 
   // https://github.com/vitest-dev/vitest

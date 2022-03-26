@@ -1,5 +1,5 @@
 <template>
-  <drawer></drawer>
+  <drawer />
   <div>
     <el-container class="main-content">
       <el-header
@@ -8,8 +8,11 @@
           settingStore.headerSetting.fixed ? ['header-fixed'] : '',
           settingStore.menuSetting.fixed ? ['menu-margin'] : ''
         ]"
-        ><div style="color: red">Headesr</div></el-header
       >
+        <div style="color: red">
+          Headesr
+        </div>
+      </el-header>
       <el-container
         :class="settingStore.headerSetting.fixed ? ['page-content'] : ''"
         :style="[
@@ -30,7 +33,7 @@
           ]"
           width="200px"
         >
-          <div style="width: 100%; height: 500px; background-color: #bfa"></div>
+          <div style="width: 100%; height: 500px; background-color: #bfa" />
         </el-aside>
         <el-container>
           <el-main
@@ -39,24 +42,34 @@
               settingStore.menuSetting.headerFixed ? ['menu-margin'] : ''
             ]"
           >
-            <div style="height: 1500px">
-              <el-button @click="showMessage">测试elmessage</el-button>
+            <i-ep-add-location />
+            <i-ep-aim />
+            <i-ep-picture-rounded color='red' font-size='30px'/>
+            <div v-loading="{ text: 'I LOVE YOU...' }" style="height: 500px">
+              Loading Area
             </div>
             <div style="height: 1500px">
-              <el-button @click="showMessage">测试elmessage</el-button>
+              <el-button @click="showMessage">
+                测试elmessage
+              </el-button>
+            </div>
+            <div style="height: 1500px">
+              <el-button @click="showMessage">
+                测试elmessage
+              </el-button>
             </div>
           </el-main>
           <el-footer
             :class="[
               settingStore.footerSetting.fixed ? 'page-footer' : '',
               settingStore.menuSetting.fixed ||
-              settingStore.menuSetting.headerFixed
+                settingStore.menuSetting.headerFixed
                 ? ['menu-margin']
                 : ''
             ]"
             :style="{ height: `${getFooterSetting.height}px` }"
           >
-            <Footer></Footer>
+            <Footer />
           </el-footer>
         </el-container>
       </el-container>
@@ -74,11 +87,11 @@ const showMessage = () => {
   ElMessage({
     message: 'this is a message.',
     grouping: true,
-    type: 'success'
+    type: 'success',
   })
 }
 const height = ref(`${getFooterSetting.value.height}px`)
-watch(height, newVal => {
+watch(height, (newVal) => {
   console.log(newVal)
 })
 console.log(height.value)
