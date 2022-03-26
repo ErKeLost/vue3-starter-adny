@@ -45,12 +45,6 @@
             <div style="height: 1500px">
               <el-button @click="showMessage">测试elmessage</el-button>
             </div>
-            <div style="height: 1500px">
-              <el-button @click="showMessage">测试elmessage</el-button>
-            </div>
-            <div style="height: 1500px">
-              <el-button @click="showMessage">测试elmessage</el-button>
-            </div>
           </el-main>
           <el-footer
             :class="[
