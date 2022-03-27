@@ -90,10 +90,10 @@ const l = {},
         path: '/',
         component: () =>
           u(
-            () => import('./index-096ba317.js'),
+            () => import('./index-39fe369b.js'),
             [
-              'static/js/index-096ba317.js',
-              'static/css/index-d48b3df9.css',
+              'static/js/index-39fe369b.js',
+              'static/css/index-85f0bc68.css',
               'static/js/vendor-366ed904.js'
             ]
           )

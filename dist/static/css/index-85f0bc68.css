@@ -2397,53 +2397,53 @@
   opacity: 0;
   transform: translate(-50%, -100%);
 }
-.menu-margin[data-v-1fb4c6cf] {
+.menu-margin[data-v-b52111fa] {
   margin-left: 200px;
 }
-.aside-fixed[data-v-1fb4c6cf] {
+.aside-fixed[data-v-b52111fa] {
   position: fixed;
   top: 0px;
   left: 0;
   height: 100%;
 }
-.aside-headerFixed[data-v-1fb4c6cf] {
+.aside-headerFixed[data-v-b52111fa] {
   position: fixed;
   left: 0;
   height: 100%;
 }
-.header-fixed[data-v-1fb4c6cf] {
+.header-fixed[data-v-b52111fa] {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: #fba;
 }
-.page-footer[data-v-1fb4c6cf] {
+.page-footer[data-v-b52111fa] {
   position: fixed;
   bottom: 0;
   background-color: #abf;
   width: 100%;
 }
-.main[data-v-1fb4c6cf] {
+.main[data-v-b52111fa] {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.main-content[data-v-1fb4c6cf],
-.page[data-v-1fb4c6cf] {
+.main-content[data-v-b52111fa],
+.page[data-v-b52111fa] {
   height: 100%;
   position: relative;
 }
-.el-header[data-v-1fb4c6cf],
-.el-footer[data-v-1fb4c6cf] {
+.el-header[data-v-b52111fa],
+.el-footer[data-v-b52111fa] {
   display: flex;
   color: #333;
   text-align: center;
   align-items: center;
 }
-.el-aside[data-v-1fb4c6cf] {
+.el-aside[data-v-b52111fa] {
   overflow-x: hidden;
   overflow-y: auto;
   line-height: 200px;
@@ -2454,15 +2454,15 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.el-aside[data-v-1fb4c6cf]::-webkit-scrollbar {
+.el-aside[data-v-b52111fa]::-webkit-scrollbar {
   display: none;
 }
-.el-main[data-v-1fb4c6cf] {
+.el-main[data-v-b52111fa] {
   color: #333;
   text-align: center;
   background-color: #f0f2f5;
   padding: 0;
 }
-.el-footer[data-v-1fb4c6cf] {
-  height: var(--06abe25a);
+.el-footer[data-v-b52111fa] {
+  height: var(--02f7876c);
 }

@@ -84,7 +84,7 @@ import {
   ag as xe,
   ah as Se
 } from './vendor-366ed904.js'
-import { _ as ke } from './index-f81563d2.js'
+import { _ as ke } from './index-22185f6c.js'
 var Ce =
     'object' == typeof global && global && global.Object === Object && global,
   Me = 'object' == typeof self && self && self.Object === Object && self,
@@ -8507,27 +8507,27 @@ const ys = { class: 'setting' },
   Hs = { class: 'setting-choose' },
   Ws = oe('界面功能'),
   Ks = { class: 'drawer-setting-switch' },
-  Us = C('div', { class: 'drawer-setting-switch-title' }, ' 固定顶栏 ', -1),
+  Us = C('div', { class: 'drawer-setting-switch-title' }, '固定顶栏', -1),
   qs = { class: 'drawer-setting-switch-action' },
   Ys = { class: 'drawer-setting-switch' },
-  Xs = C('div', { class: 'drawer-setting-switch-title' }, ' 固定侧边栏 ', -1),
+  Xs = C('div', { class: 'drawer-setting-switch-title' }, '固定侧边栏', -1),
   Zs = { class: 'drawer-setting-switch-action' },
   Gs = { class: 'drawer-setting-switch' },
   Js = C(
     'div',
     { class: 'drawer-setting-switch-title' },
-    ' 不占据Header的固定侧边栏 ',
+    '不占据Header的固定侧边栏',
     -1
   ),
   Qs = { class: 'drawer-setting-switch-action' },
   eu = { class: 'drawer-setting-switch' },
-  tu = C('div', { class: 'drawer-setting-switch-title' }, ' 固定Footer ', -1),
+  tu = C('div', { class: 'drawer-setting-switch-title' }, '固定Footer', -1),
   nu = { class: 'drawer-setting-switch-action' },
   ou = { class: 'drawer-setting-slider' },
-  au = C('div', { class: 'drawer-setting-switch-title' }, ' Heade高度 ', -1),
+  au = C('div', { class: 'drawer-setting-switch-title' }, 'Heade高度', -1),
   ru = { class: 'slider' },
   iu = { class: 'drawer-setting-slider' },
-  lu = C('div', { class: 'drawer-setting-switch-title' }, ' Footer高度 ', -1),
+  lu = C('div', { class: 'drawer-setting-switch-title' }, 'Footer高度', -1),
   su = { class: 'slider' },
   uu = x({
     setup(e) {
@@ -8922,8 +8922,8 @@ var mu = ke(
   }),
   [['__scopeId', 'data-v-41e1a500']]
 )
-const gu = (e) => (xe('data-v-1fb4c6cf'), (e = e()), Se(), e),
-  hu = gu(() => C('div', { style: { color: 'red' } }, ' Headesr ', -1)),
+const gu = (e) => (xe('data-v-b52111fa'), (e = e()), Se(), e),
+  hu = gu(() => C('div', { style: { color: 'red' } }, 'Headesr', -1)),
   bu = gu(() =>
     C(
       'div',
@@ -8941,7 +8941,7 @@ const gu = (e) => (xe('data-v-1fb4c6cf'), (e = e()), Se(), e),
 var Mu = ke(
   x({
     setup(e) {
-      we((e) => ({ '06abe25a': r.value }))
+      we((e) => ({ '02f7876c': r.value }))
       const t = ds(),
         { getHeaderSetting: n, getFooterSetting: o } = (function () {
           const e = ds()
@@ -9124,6 +9124,6 @@ var Mu = ke(
       )
     }
   }),
-  [['__scopeId', 'data-v-1fb4c6cf']]
+  [['__scopeId', 'data-v-b52111fa']]
 )
 export { Mu as default }

@@ -3,5 +3,5 @@
 
 # npm test
 pnpm prettier
-pnpm build
-pnpm lint
+# pnpm build
+# pnpm lint
