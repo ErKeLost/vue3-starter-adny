@@ -1,7 +1,9 @@
 <template>
   <div class="setting">
     <span class="setting-title">项目配置</span>
-    <el-divider> <span class="setting-title-sub"> 主题化 </span></el-divider>
+    <el-divider>
+      <span class="setting-title-sub">主题化</span>
+    </el-divider>
     <el-switch
       v-model="show"
       size="large"
@@ -17,11 +19,11 @@
       <NetFix />
     </el-divider>
     <el-divider>
-      <span class="setting-title-sub"> 系统主题 </span>
+      <span class="setting-title-sub">系统主题</span>
     </el-divider>
     <span>I cannot choose the best. The best chooses me.</span>
     <el-divider>
-      <span class="setting-title-sub"> 导航栏模式 </span>
+      <span class="setting-title-sub">导航栏模式</span>
     </el-divider>
     <div class="drawer-setting-item align-items-top">
       <div class="drawer-setting-item-style align-items-top">

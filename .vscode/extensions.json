@@ -4,6 +4,7 @@
     "antfu.iconify",
     "antfu.unocss",
     "johnsoncodehk.volar",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
   ]
 }

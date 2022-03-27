@@ -15,15 +15,16 @@ module.exports = {
   },
   extends: [
     './.eslintrc-auto-import.json',
+    'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
-    // 'eslint:recommended',
-    'prettier'
+    'plugin:prettier/recommended' // 添加 prettier 插件s
   ],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
+  plugins: ['vue', '@typescript-eslint', 'import', 'prettier'],
   rules: {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',

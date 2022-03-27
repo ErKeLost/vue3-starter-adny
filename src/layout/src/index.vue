@@ -46,11 +46,14 @@
             <div v-loading="{ text: 'I LOVE YOU...' }" style="height: 500px">
               Loading Area
             </div>
-            <div style="height: 1500px">
-              <el-button @click="showMessage"> 测试elmessage </el-button>
+            <div v-loading="{ text: 'erkelost adny...' }" style="height: 500px">
+              Loading Area
             </div>
             <div style="height: 1500px">
-              <el-button @click="showMessage"> 测试elmessage </el-button>
+              <el-button @click="showMessage">测试elmessage</el-button>
+            </div>
+            <div style="height: 1500px">
+              <el-button @click="showMessage">测试elmessage</el-button>
             </div>
           </el-main>
           <el-footer
