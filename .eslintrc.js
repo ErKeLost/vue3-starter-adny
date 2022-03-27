@@ -13,8 +13,12 @@ module.exports = {
     defineProps: true,
     defineExpose: true
   },
-  plugins: ['prettier'],
-  extends: ['./.eslintrc-auto-import.json'],
+  extends: [
+    './.eslintrc-auto-import.json',
+    'plugin:vue/vue3-recommended',
+    // 'eslint:recommended',
+    'prettier',
+  ],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
