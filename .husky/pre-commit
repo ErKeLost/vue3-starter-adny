@@ -2,6 +2,6 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # npm test
-# pnpm prettier
+pnpm prettier
 # pnpm build
 # pnpm lint
