@@ -9,9 +9,7 @@
           settingStore.menuSetting.fixed ? ['menu-margin'] : ''
         ]"
       >
-        <div style="color: red">
-          Headesr
-        </div>
+        <div style="color: red">Headesr</div>
       </el-header>
       <el-container
         :class="settingStore.headerSetting.fixed ? ['page-content'] : ''"
@@ -49,21 +47,17 @@
               Loading Area
             </div>
             <div style="height: 1500px">
-              <el-button @click="showMessage">
-                测试elmessage
-              </el-button>
+              <el-button @click="showMessage"> 测试elmessage </el-button>
             </div>
             <div style="height: 1500px">
-              <el-button @click="showMessage">
-                测试elmessage
-              </el-button>
+              <el-button @click="showMessage"> 测试elmessage </el-button>
             </div>
           </el-main>
           <el-footer
             :class="[
               settingStore.footerSetting.fixed ? 'page-footer' : '',
               settingStore.menuSetting.fixed ||
-                settingStore.menuSetting.headerFixed
+              settingStore.menuSetting.headerFixed
                 ? ['menu-margin']
                 : ''
             ]"
@@ -87,7 +81,7 @@ const showMessage = () => {
   ElMessage({
     message: 'this is a message.',
     grouping: true,
-    type: 'success',
+    type: 'success'
   })
 }
 const height = ref(`${getFooterSetting.value.height}px`)

@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
   globals: {
     defineEmits: true,
@@ -11,13 +11,10 @@ module.exports = {
     GLOBAL_VAR: true,
     window: true,
     defineProps: true,
-    defineExpose: true,
+    defineExpose: true
   },
   plugins: ['prettier'],
-  extends: [
-    './.eslintrc-auto-import.json',
-    '@antfu',
-  ],
+  extends: ['./.eslintrc-auto-import.json'],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
@@ -33,6 +30,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'vue/no-mutating-props': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-  },
+    '@typescript-eslint/no-non-null-assertion': 'off'
+  }
 }

@@ -13,7 +13,7 @@ const projectSetting = {
     // 固定顶部
     fixed: true,
     // 显示重载按钮
-    isReload: true,
+    isReload: true
   },
   footerSetting: {
     height: 113,
@@ -22,7 +22,7 @@ const projectSetting = {
     // 固定顶部
     fixed: true,
     // 显示重载按钮
-    isReload: true,
+    isReload: true
   },
   // 页脚
   showFooter: true,
@@ -33,7 +33,7 @@ const projectSetting = {
     // 是否显示
     show: true,
     // 固定多标签
-    fixed: true,
+    fixed: true
   },
   // 菜单
   menuSetting: {
@@ -49,14 +49,14 @@ const projectSetting = {
     // 触发移动端侧边栏的宽度
     mobileWidth: 800,
     // 隐藏silder
-    collapsed: false,
+    collapsed: false
   },
   // 面包屑
   crumbsSetting: {
     // 是否显示
     show: true,
     // 显示图标
-    showIcon: false,
+    showIcon: false
   },
   // 菜单权限模式 FIXED 前端固定路由  BACK 动态获取
   permissionMode: 'FIXED',
@@ -65,6 +65,6 @@ const projectSetting = {
   // 路由动画类型
   pageAnimateType: 'zoom-fade',
   // layout模式  单页面fixed布局
-  isSpaFixed: false,
+  isSpaFixed: false
 }
 export default projectSetting

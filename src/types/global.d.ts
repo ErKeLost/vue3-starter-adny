@@ -4,7 +4,7 @@ import type {
   FunctionalComponent,
   VNode,
   VNodeChild,
-  PropType as VuePropType,
+  PropType as VuePropType
 } from 'vue'
 
 declare global {
@@ -27,7 +27,7 @@ declare global {
   declare type VueNode = VNodeChild | JSX.Element
 
   export type Writable<T> = {
-    -readonly [P in keyof T]: T[P];
+    -readonly [P in keyof T]: T[P]
   }
 
   declare type Nullable<T> = T | null
@@ -36,7 +36,7 @@ declare global {
   type ReadonlyRecordable<T> = Readonly<Record<string, T>>
   type Indexable<T> = Record<string, T>
   declare type DeepPartial<T> = {
-    [P in keyof T]?: DeepPartial<T[P]>;
+    [P in keyof T]?: DeepPartial<T[P]>
   }
   declare type TimeoutHandle = ReturnType<typeof setTimeout>
   declare type IntervalHandle = ReturnType<typeof setInterval>

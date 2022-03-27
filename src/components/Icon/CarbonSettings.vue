@@ -13,6 +13,6 @@
 
 <script lang="ts">
 export default {
-  name: 'CarbonSettings',
+  name: 'CarbonSettings'
 }
 </script>

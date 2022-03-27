@@ -5,23 +5,22 @@ import NProgress from 'nprogress'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('~/layout/index'),
+    component: () => import('~/layout/index')
   },
   {
     path: '/:pathMatch(.*)*',
-    component: () => import('~/components/not-found/not-found.vue'),
-  },
+    component: () => import('~/components/not-found/not-found.vue')
+  }
 ]
 const router = createRouter({
   routes,
-  history: createWebHashHistory(),
+  history: createWebHashHistory()
 })
 router.beforeEach(() => {
   //   console.log('全局路由前置守卫：to,from\n', to, from)
   // 设置页面标题
   //   document.title = (to.meta.title as string) || import.meta.env.VITE_APP_TITLE
-  if (!NProgress.isStarted())
-    NProgress.start()
+  if (!NProgress.isStarted()) NProgress.start()
 })
 
 router.afterEach(() => {

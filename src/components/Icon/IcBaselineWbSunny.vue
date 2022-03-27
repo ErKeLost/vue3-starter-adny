@@ -9,6 +9,6 @@
 
 <script lang="ts">
 export default {
-  name: 'IcBaselineWbSunny',
+  name: 'IcBaselineWbSunny'
 }
 </script>

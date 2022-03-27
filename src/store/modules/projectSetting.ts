@@ -5,7 +5,7 @@ import type {
   IcrumbsSetting,
   IheaderSetting,
   ImenuSetting,
-  ImultiTabsSetting,
+  ImultiTabsSetting
 } from '~/types/config'
 
 const {
@@ -20,7 +20,7 @@ const {
   crumbsSetting,
   permissionMode,
   isPageAnimate,
-  pageAnimateType,
+  pageAnimateType
 } = projectSetting
 interface ProjectSettingState {
   navMode: string // 导航模式
@@ -50,7 +50,7 @@ export const useProjectSettingStore = defineStore({
     crumbsSetting,
     permissionMode,
     isPageAnimate,
-    pageAnimateType,
+    pageAnimateType
   }),
   getters: {
     getNavMode(): string {
@@ -88,7 +88,7 @@ export const useProjectSettingStore = defineStore({
     },
     getPageAnimateType(): string {
       return this.pageAnimateType
-    },
+    }
   },
   actions: {
     setNavTheme(value: string): void {
@@ -96,8 +96,8 @@ export const useProjectSettingStore = defineStore({
     },
     setIsMobile(value: boolean): void {
       this.isMobile = value
-    },
-  },
+    }
+  }
 })
 
 // Need to be used outside the setup
