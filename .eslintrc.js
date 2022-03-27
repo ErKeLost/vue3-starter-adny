@@ -17,7 +17,7 @@ module.exports = {
     './.eslintrc-auto-import.json',
     'plugin:vue/vue3-recommended',
     // 'eslint:recommended',
-    'prettier',
+    'prettier'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
