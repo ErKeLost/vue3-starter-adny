@@ -117,12 +117,14 @@ console.log(height.value)
   left: 0;
   width: 100%;
   background: #fba;
+  z-index: 2001;
 }
 .page-footer {
   position: fixed;
   bottom: 0;
   background-color: #abf;
   width: 100%;
+  z-index: 2001;
 }
 .main {
   position: fixed;

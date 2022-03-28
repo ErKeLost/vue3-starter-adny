@@ -33,6 +33,7 @@
     "eagerComputed": true,
     "effectScope": true,
     "EffectScope": true,
+    "ElMessage": true,
     "extendRef": true,
     "getActivePinia": true,
     "getCurrentInstance": true,

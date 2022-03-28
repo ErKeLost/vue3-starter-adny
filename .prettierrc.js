@@ -4,7 +4,8 @@ module.exports = {
   printWidth: 80,
   singleQuote: true,
   trailingComma: 'none',
-  semi: false
+  semi: false,
+  endOfLine: 'auto'
 }
 // useTabs：使用tab缩进还是空格缩进，选择false；
 // tabWidth：tab是空格的情况下，是几个空格，选择2个；
