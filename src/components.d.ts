@@ -16,15 +16,11 @@ declare module 'vue' {
     ElDivider: typeof import('element-plus/es')['ElDivider']
     ElDrawer: typeof import('element-plus/es')['ElDrawer']
     ElFooter: typeof import('element-plus/es')['ElFooter']
-    ElHeade: typeof import('element-plus/es')['ElHeade']
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMain: typeof import('element-plus/es')['ElMain']
-    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElSlider: typeof import('element-plus/es')['ElSlider']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
-    ElTable: typeof import('element-plus/es')['ElTable']
-    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     Footer: typeof import('./layout/src/components/Footer/index.vue')['default']
     IcBaselineWbSunny: typeof import('./components/Icon/IcBaselineWbSunny.vue')['default']
@@ -39,4 +35,4 @@ declare module 'vue' {
   }
 }
 
-export {}
+export { }
