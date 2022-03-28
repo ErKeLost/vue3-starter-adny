@@ -39,4 +39,4 @@ declare module 'vue' {
   }
 }
 
-export { }
+export {}
